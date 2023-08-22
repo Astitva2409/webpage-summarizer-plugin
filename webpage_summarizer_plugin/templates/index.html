@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebPage Summarizer</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://cdn-gjbpp.nitrocdn.com/qKWQltUZGDkGqBclcOLChoOFwHOOBwQD/assets/images/optimized/rev-ce36699/www.unthinkable.co/wp-content/uploads/2022/08/vector-smart-object_2.png"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <img
+        src="https://cdn-gjbpp.nitrocdn.com/qKWQltUZGDkGqBclcOLChoOFwHOOBwQD/assets/images/optimized/rev-ce36699/www.unthinkable.co/wp-content/uploads/2022/08/cropped-footer-logo.webp"
+        alt="logo"
+      />
+    </header>
+    <div class="container">
+      <h1>Webpage Summarizer</h1>
+      <form method="post" action="/submit">
+        <label for="input_field">Enter Webpage URL</label>
+        <input
+          type="text"
+          id="input_field"
+          name="input_field"
+          required
+        /><br /><br />
+        <button type="submit" name="summary">Provide Summary</button>
+        <button type="submit" name="major_points">Provide Major Points</button>
+      </form>
+      {% if error_msg %}
+      <div class="results-header">
+        <h2 id="result-heading">{{ heading }}</h2>
+        <div class="actions">
+          <button id="clear-response_err" name="clear-response">
+            Clear Response
+          </button>
+        </div>
+      </div>
+      <span id="result-list">{{ error_msg }}</span>
+      {% endif %} {% if result %}
+      <div class="results-header">
+        <h2 id="result-heading">{{ heading }}</h2>
+        <div class="actions">
+          <button id="copy-button">Copy to Clipboard</button>
+          <button id="clear-response" name="clear-response">
+            Clear Response
+          </button>
+        </div>
+      </div>
+      <ul id="result-list">
+        {% for point in result %}
+        <li>{{ point }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
