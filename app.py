@@ -1,6 +1,4 @@
-from webpage_summarizer_plugin import create_app
-
-app = create_app()
+from webpage_summarizer_plugin import app
 
 if __name__ == "__main__":
     app.run(debug=False)
