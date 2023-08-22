@@ -1,0 +1,40 @@
+[
+  {
+    "package": "flask",
+    "version": "2.0.1",
+    "deps": [
+      { "package": "werkzeug", "version": "2.3.7" },
+      { "package": "colorama", "version": "0.4.6" },
+      { "package": "markupsafe", "version": "2.1.3" },
+      { "package": "jinja2", "version": "3.1.2" },
+      { "package": "itsdangerous", "version": "2.1.2" },
+      { "package": "click", "version": "8.1.7" }
+    ]
+  },
+  {
+    "package": "beautifulsoup4",
+    "version": "4.9.3",
+    "deps": [{ "package": "soupsieve", "version": "2.4.1" }]
+  },
+  {
+    "package": "nltk",
+    "version": "3.6.3",
+    "deps": [
+      { "package": "colorama", "version": "0.4.6" },
+      { "package": "tqdm", "version": "4.66.1" },
+      { "package": "joblib", "version": "1.3.2" },
+      { "package": "click", "version": "8.1.7" },
+      { "package": "regex", "version": "2023.8.8" }
+    ]
+  },
+  {
+    "package": "requests",
+    "version": "2.26.0",
+    "deps": [
+      { "package": "urllib3", "version": "1.26.16" },
+      { "package": "certifi", "version": "2023.7.22" },
+      { "package": "idna", "version": "3.4" },
+      { "package": "charset-normalizer", "version": "2.0.12" }
+    ]
+  }
+]
